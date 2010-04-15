@@ -1,0 +1,19 @@
+<h1>New word</h1>
+
+<% form_for(@word) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :speechType %><br />
+    <%= f.text_field :speechType %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', words_path %>

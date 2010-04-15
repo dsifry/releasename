@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @word.name %>
+</p>
+
+<p>
+  <b>Speechtype:</b>
+  <%=h @word.speechType %>
+</p>
+
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>
