@@ -1,5 +1,6 @@
 <h1>New word</h1>
 
+<% parts_of_speech = SpeechType.find(:all, :order => :name) %>
 <% form_for(@word) do |f| %>
   <%= f.error_messages %>
 
@@ -8,8 +9,8 @@
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :speechType %><br />
-    <%= f.text_field :speechType %>
+    Type of Speech: <br />
+    <%= f.collection_select :speech_type, parts_of_speech, :id, :name %>
   </p>
   <p>
     <%= f.submit 'Create' %>

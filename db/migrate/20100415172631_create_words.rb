@@ -2,8 +2,8 @@ class CreateWords < ActiveRecord::Migration
   def self.up
     create_table :words do |t|
       t.string :name
-      t.integer :speechType
-
+      t.integer :speech_type_id
+      
       t.timestamps
     end
   end

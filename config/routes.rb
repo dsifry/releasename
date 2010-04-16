@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :words
+  map.resources :words, :collection => { :import => :get }
+  map.resources :releases
+  map.root :controller => :releases, :action => :new
 
   # The priority is based upon order of creation: first created -> highest priority.
 

@@ -2,14 +2,16 @@
 
 <% form_for(@word) do |f| %>
   <%= f.error_messages %>
+  <% st = f.speech_type %>
 
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :speechType %><br />
-    <%= f.text_field :speechType %>
+    Type of Speech:<br />
+    
+    <%= st. :name %>
   </p>
   <p>
     <%= f.submit 'Update' %>
