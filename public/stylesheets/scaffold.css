@@ -1,4 +1,7 @@
-body { background-color: #fff; color: #333; }
+body {
+    background-color: #fff; color: #333;
+    min-width: 1024px; 
+}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -55,8 +58,14 @@ a:hover { color: #fff; background-color:#000; }
 h1 {
     font-size: 7em;
     text-align: center;
+    padding-top: 50px;
 }
 
+#gimmemore {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: -50px;
+}
 h3 {
     text-align: right;
 }
