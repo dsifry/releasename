@@ -9,7 +9,7 @@ set :branch,      'master'
 set :deploy_to,   "/home/releasename"
 set :deploy_via,  :remote_cache
 set :gateway,     "#{ENV['USER']}@ob.gd"
-set :repository,  "git@github.com:dsifry/releasename.git"
+set :repository,  "git://github.com/dsifry/releasename.git"
 set :scm,         :git
 set :ssh_options, { :forward_agent => true }
 set :user,        'dsifry'

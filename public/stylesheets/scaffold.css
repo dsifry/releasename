@@ -57,6 +57,7 @@ a:hover { color: #fff; background-color:#000; }
 
 h1 {
     font-size: 7em;
+    line-height: 100%;
     text-align: center;
     padding-top: 50px;
 }

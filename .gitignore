@@ -1,3 +1,14 @@
-*.log db/schema.rb db/schema.sql .idea/.generators .idea/.rakeTasks .idea/dictionaries/dsifry.xml .idea/encodings.xml .idea/misc.xml .idea/modules.xml .idea/releasename.iml .idea/vcs.xml .idea/workspace.xml
-
-
+*.log 
+db/schema.rb 
+db/schema.sql 
+db/development.db
+.idea/*
+.idea/.generators 
+.idea/.rakeTasks 
+.idea/dictionaries/dsifry.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/releasename.iml
+.idea/vcs.xml
+.idea/workspace.xml

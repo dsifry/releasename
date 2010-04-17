@@ -4,6 +4,6 @@ class Release < ActiveRecord::Base
     adjs = Word.find_all_by_speech_type_id(2)
     noun = nouns[rand(nouns.size)]
     adj = adjs[rand(adjs.size)]
-    self.new :name => (adj.name + ' ' + noun.name)
+    self.new :name => (adj.name + ' ' + noun.name).titleize
   end
 end
