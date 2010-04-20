@@ -15,6 +15,7 @@ class ReleasesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @releases }
+      format.json { render :json => @releases }
     end
   end
 
@@ -26,6 +27,7 @@ class ReleasesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @release }
+      format.json { render :json => @release }
     end
   end
 

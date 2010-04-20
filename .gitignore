@@ -1,7 +1,9 @@
 *.log 
+log/*.log
 db/schema.rb 
 db/schema.sql 
 db/development.db
+db/development.sqlite3
 .idea/*
 .idea/.generators 
 .idea/.rakeTasks 
