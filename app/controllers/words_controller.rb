@@ -83,16 +83,4 @@ class WordsController < ApplicationController
     end
   end
 
-  def import
-    file = File.new("adj.txt", "r")
-    while (line = file.gets)
-      w = Word.new(:name => line.chop, :speech_type_id => 2)
-      w.save!
-    end
-    file = File.new("noun.txt", "r")
-    while (line = file.gets)
-      w = Word.new(:name => line.chop, :speech_type_id => 1)
-      w.save!
-    end
-  end
 end

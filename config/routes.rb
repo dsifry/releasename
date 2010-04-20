@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :words, :collection => { :import => :get }
+  map.resources :nouns, :collection => { :import => :get }
+  map.resources :adjectives, :collection => { :import => :get }
   map.resources :releases
   map.root :controller => :releases, :action => :new
 
