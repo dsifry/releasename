@@ -2,10 +2,12 @@
 
 <table>
   <tr>
+    <th>Name</th>
   </tr>
 
 <% @nouns.each do |noun| %>
   <tr>
+    <td><%=h noun.name %></td>
     <td><%= link_to 'Show', noun %></td>
     <td><%= link_to 'Edit', edit_noun_path(noun) %></td>
     <td><%= link_to 'Destroy', noun, :confirm => 'Are you sure?', :method => :delete %></td>

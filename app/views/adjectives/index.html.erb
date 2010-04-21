@@ -2,10 +2,12 @@
 
 <table>
   <tr>
+    <th>Name</th>
   </tr>
 
 <% @adjectives.each do |adjective| %>
   <tr>
+    <td><%=h adjective.name %></td>
     <td><%= link_to 'Show', adjective %></td>
     <td><%= link_to 'Edit', edit_adjective_path(adjective) %></td>
     <td><%= link_to 'Destroy', adjective, :confirm => 'Are you sure?', :method => :delete %></td>

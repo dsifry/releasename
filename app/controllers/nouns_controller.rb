@@ -83,10 +83,12 @@ class NounsController < ApplicationController
     end
   end
 
-  file = File.new("noun.txt", "r")
-  while (line = file.gets)
-    w = Noun.new(:name => line.chop)
-    w.save!
+  def import
+    file = File.new("noun.txt", "r")
+    while (line = file.gets)
+      w = Noun.new(:name => line.chop)
+      w.save!
+    end
   end
 
 end
