@@ -30,3 +30,7 @@ namespace :deploy do
     task t, :roles => :app do ; end
   end
 end
+
+task :after_update_code do
+  run "ln -nfs #{deploy_to}/#{shared_dir}/config/database.yml #{release_path}/config/database.yml"
+end
