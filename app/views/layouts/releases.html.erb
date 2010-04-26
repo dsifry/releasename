@@ -9,6 +9,10 @@
 </head>
 <body>
 <a href='/'><img src='/images/releasenamelogo2.png' height='58' width='456' /></a><div id="gimmemore"><%= link_to 'Gimme More!', new_release_path %></div>
+<%- flash.each do |name, msg| -%>
+  <p><%= content_tag :div, msg, :id => "flash_#{name}" %></p>
+<%- end -%>
+
 <%= yield %>
 
 <script type="text/javascript">

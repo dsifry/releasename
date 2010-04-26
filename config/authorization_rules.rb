@@ -6,6 +6,9 @@ authorization do
     has_permission_on :releases, :to => [:index, :show, :new, :create]
     has_permission_on :adjectives, :to => [:index, :show]
     has_permission_on :nouns, :to => [:index, :show]
-    has_permission_on :users, :to => [:new, :create, :update]
+    has_permission_on :users, :to => [:new, :create]
+    has_permission_on :users, :to => [:edit, :update] do
+      if_attribute :id => is { user.id }
+    end
   end
 end
