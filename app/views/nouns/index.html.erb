@@ -9,12 +9,19 @@
   <tr>
     <td><%=h noun.name %></td>
     <td><%= link_to 'Show', noun %></td>
+  <% if permitted_to? :edit, noun %>
     <td><%= link_to 'Edit', edit_noun_path(noun) %></td>
+  <% end %>
+  <% if permitted_to? :destroy, noun %>
     <td><%= link_to 'Destroy', noun, :confirm => 'Are you sure?', :method => :delete %></td>
+  <% end %>
   </tr>
 <% end %>
 </table>
-
+<br />
+<%= will_paginate @nouns %>
 <br />
 
-<%= link_to 'New noun', new_noun_path %>
+<% if permitted_to? :create, Noun.new %>
+  <%= link_to 'New noun', new_noun_path %>
+<% end %>

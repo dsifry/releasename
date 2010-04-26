@@ -3,6 +3,7 @@
   <%=h @adjective.name %>
 </p>
 
-
-<%= link_to 'Edit', edit_adjective_path(@adjective) %> |
+<% if permitted_to? :edit, @adjective %>
+  <%= link_to 'Edit', edit_adjective_path(@adjective) %> |
+<% end %>
 <%= link_to 'Back', adjectives_path %>

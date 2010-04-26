@@ -1,0 +1,65 @@
+gold_1:
+  name: Opened Savory
+  created_at: 2010-04-26 01:25:18
+  updated_at: 2010-04-26 01:25:18
+  id: 1
+gold_2:
+  name: Neoclassic Periapsis
+  created_at: 2010-04-26 03:37:00
+  updated_at: 2010-04-26 03:37:00
+  id: 2
+gold_3:
+  name: Unconfirmed Syncretism
+  created_at: 2010-04-26 03:37:29
+  updated_at: 2010-04-26 03:37:29
+  id: 3
+gold_4:
+  name: Steam Powered Beehive
+  created_at: 2010-04-26 03:37:47
+  updated_at: 2010-04-26 03:37:47
+  id: 4
+gold_5:
+  name: Entrenched Tobit
+  created_at: 2010-04-26 04:59:32
+  updated_at: 2010-04-26 04:59:32
+  id: 5
+gold_6:
+  name: Antennal Outage
+  created_at: 2010-04-26 05:05:33
+  updated_at: 2010-04-26 05:05:33
+  id: 6
+gold_7:
+  name: Bulbaceous Greenery
+  created_at: 2010-04-26 05:05:47
+  updated_at: 2010-04-26 05:05:47
+  id: 7
+gold_8:
+  name: Inattentive Treasurer
+  created_at: 2010-04-26 05:05:59
+  updated_at: 2010-04-26 05:05:59
+  id: 8
+gold_9:
+  name: Memberless Semitrailer
+  created_at: 2010-04-26 05:10:23
+  updated_at: 2010-04-26 05:10:23
+  id: 9
+gold_10:
+  name: Unreasonable Armorer
+  created_at: 2010-04-26 05:17:34
+  updated_at: 2010-04-26 05:17:34
+  id: 10
+gold_11:
+  name: Increasing Monotonic Animism
+  created_at: 2010-04-26 05:27:01
+  updated_at: 2010-04-26 05:27:01
+  id: 11
+gold_12:
+  name: Assertive Pawer
+  created_at: 2010-04-26 05:27:33
+  updated_at: 2010-04-26 05:27:33
+  id: 12
+gold_13:
+  name: Pocket Size Usuli
+  created_at: 2010-04-26 05:35:01
+  updated_at: 2010-04-26 05:35:01
+  id: 13

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100420155134) do
+ActiveRecord::Schema.define(:version => 20100426014156) do
 
   create_table "adjectives", :force => true do |t|
     t.string   "name"
@@ -17,11 +17,15 @@ ActiveRecord::Schema.define(:version => 20100420155134) do
     t.datetime "updated_at"
   end
 
+  add_index "adjectives", ["name"], :name => "index_adjectives_on_name"
+
   create_table "nouns", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "nouns", ["name"], :name => "index_nouns_on_name"
 
   create_table "releases", :force => true do |t|
     t.string   "name"
@@ -29,19 +33,28 @@ ActiveRecord::Schema.define(:version => 20100420155134) do
     t.datetime "updated_at"
   end
 
-  create_table "speech_types", :force => true do |t|
+  create_table "roles", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "words", :force => true do |t|
-    t.string   "name"
-    t.integer  "speech_type_id"
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer "user_id", :null => false
+    t.integer "role_id", :null => false
+  end
+
+  add_index "roles_users", ["role_id"], :name => "index_roles_users_on_role_id"
+  add_index "roles_users", ["user_id"], :name => "index_roles_users_on_user_id"
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "words", ["speech_type_id"], :name => "index_words_on_speech_type_id"
 
 end

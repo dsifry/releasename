@@ -1,0 +1,18 @@
+gold_1:
+  created_at: 2010-04-26 01:25:18
+  crypted_password: 86ccead3c951b2110e883904ad7566c27751d6df0d33cb66391d8ee745e1af8c81326d7dbff6384a966457a28ac283df2df60944fb5d9cf1bf9c83c8290d5d3f
+  updated_at: 2010-04-26 01:25:18
+  username: dsifry
+  id: 1
+  password_salt: xsKoGkvADMrwis2h0LKU
+  persistence_token: 1a0f88f5d3b8ec5c4099bd82a059b99d12c2456a1730ad74a0972a8f0ff02c8dbf3b1a32f5019bc89ad2698637bf9e8c8a4930f4b3c3217f9da4e4f5bd16a3a8
+  email: david@sifry.com
+gold_2:
+  created_at: 2010-04-26 05:10:22
+  crypted_password: b14a69cf015483f20d71787107bf98e7f23deedbde9372cbad3b2923c2e601765b9350aba139ac8844aefe8311faf5478ab0e0b64189f462c83977948ca9f85f
+  updated_at: 2010-04-26 05:10:22
+  username: admin
+  id: 2
+  password_salt: G65Y6fKurgNB-HmchJWv
+  persistence_token: 1df6d506d918465c92b3eeb755d98b8e200a2f04e9c8598218432f2e6ac5ff97423efa462961aad20549cc3a56097ed9d906ee7070198b9685a0f6e7ed65654b
+  email: dsifry@gmail.com

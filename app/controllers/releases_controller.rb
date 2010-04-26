@@ -1,9 +1,14 @@
 class ReleasesController < ApplicationController
+
+  filter_resource_access
+  
+  layout "releases"
+  
   def new
     @release = Release.generate
     @release.save!
     respond_to do |format|
-      flash[:notice] = 'Release was successfully created.'
+#      flash[:notice] = 'Release was successfully created.'
       format.html { redirect_to(@release) }
       format.xml  { render :xml => @release, :status => :created, :location => @release }
    end

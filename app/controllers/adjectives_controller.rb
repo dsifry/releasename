@@ -1,8 +1,10 @@
 class AdjectivesController < ApplicationController
+  filter_resource_access
+  
   # GET /adjectives
   # GET /adjectives.xml
   def index
-    @adjectives = Adjective.all
+    @adjectives = Adjective.paginate :page => params[:page], :order => 'name ASC'
 
     respond_to do |format|
       format.html # index.html.erb

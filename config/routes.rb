@@ -1,6 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :nouns, :collection => { :import => :get }
-  map.resources :adjectives, :collection => { :import => :get }
+  map.signup 'signup', :controller => 'users', :action => 'new'
+  map.login "login", :controller => "user_sessions", :action => "new"
+  map.logout "logout", :controller => "user_sessions", :action => "destroy"
+  map.resources :user_sessions
+  map.resources :roles
+  map.resources :users
+  map.resources :nouns, :new => { :import => :get }
+  map.resources :nouns
+  map.resources :adjectives, :new => { :import => :get }
+  map.resources :adjectives
   map.resources :releases
   map.root :controller => :releases, :action => :new
 

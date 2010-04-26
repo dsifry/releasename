@@ -9,12 +9,20 @@
   <tr>
     <td><%=h adjective.name %></td>
     <td><%= link_to 'Show', adjective %></td>
+  <% if permitted_to? :edit, adjective %>
     <td><%= link_to 'Edit', edit_adjective_path(adjective) %></td>
+  <% end %>
+  <% if permitted_to? :destroy, adjective %>
     <td><%= link_to 'Destroy', adjective, :confirm => 'Are you sure?', :method => :delete %></td>
+  <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
+<%= will_paginate @adjectives %>
+<br />
 
-<%= link_to 'New adjective', new_adjective_path %>
+<% if permitted_to? :create, Adjective.new %>
+  <%= link_to 'New adjective', new_adjective_path %>
+<% end %>

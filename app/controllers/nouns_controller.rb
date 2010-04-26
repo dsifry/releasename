@@ -1,8 +1,9 @@
 class NounsController < ApplicationController
+  filter_resource_access
   # GET /nouns
   # GET /nouns.xml
   def index
-    @nouns = Noun.all
+    @nouns = Noun.paginate :page => params[:page], :order => 'name ASC'
 
     respond_to do |format|
       format.html # index.html.erb
