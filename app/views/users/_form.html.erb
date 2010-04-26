@@ -16,11 +16,13 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </p>
-  <% for role in Role.find(:all) %>
-  <div>
-    <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
-    <%= role.name %>
-  </div>
+  <% if current_user && current_user.roles.map(&:name).include?('admin') %>
+    <% for role in Role.find(:all) %>
+    <div>
+      <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
+      <%= role.name %>
+    </div>
+    <% end %>
   <% end %>
   <p><%= f.submit "Submit" %></p>
 <% end %>

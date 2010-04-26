@@ -6,5 +6,6 @@ authorization do
     has_permission_on :releases, :to => [:index, :show, :new, :create]
     has_permission_on :adjectives, :to => [:index, :show]
     has_permission_on :nouns, :to => [:index, :show]
+    has_permission_on :users, :to => [:new, :create, :update]
   end
 end

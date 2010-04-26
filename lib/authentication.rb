@@ -46,7 +46,7 @@ module Authentication
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil
   end
-
+  
   private
 
   def store_target_location

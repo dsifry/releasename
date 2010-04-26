@@ -12,6 +12,9 @@
           <%= link_to "Profile", edit_user_path(current_user) %>
             Not you?
           <%= link_to "Log out", logout_path %>
+          <% if current_user.roles.map(&:name).include?('admin') %>
+            | <%= link_to "Add another user", signup_path %>
+          <% end %>
         <% else %>
           <%= link_to "Sign up", signup_path %> or
           <%= link_to "log in", login_path %>.

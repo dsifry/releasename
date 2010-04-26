@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  filter_resource_access
+
   def new
     @user = User.new
   end
@@ -27,4 +29,5 @@ class UsersController < ApplicationController
       render :action => 'edit'
     end
   end
+
 end
